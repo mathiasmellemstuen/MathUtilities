@@ -5,5 +5,4 @@
 #include "TimerSort.h"
 
 namespace TimeSort {
-    int* sort(int[] arr, )
 }
