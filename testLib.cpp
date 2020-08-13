@@ -1,12 +1,19 @@
 #include <iostream>
-#include "BinarySearch.cpp"
+#include "InsertionSort.cpp"
 
-using namespace BinarySearch;
+using namespace InsertionSort;
 
 int main() {
-    int arr[] = {1,2,3, 4};
+
+    //Testing the insertion sort algorithm:
+    std::cout << "TESTING: Insertion sort" << std::endl;
+    int arr[] = {5,1,54, -2, 54,36};
     int length = sizeof(arr) / sizeof(*arr);
     int* sorted = sort(arr, length);
 
+    for(int i = 0; i < length; i++) {
+        std::cout << sorted[i] << std::endl;
+    }
+    delete sorted;
     return 0;
 }
