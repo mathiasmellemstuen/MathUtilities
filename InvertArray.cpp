@@ -9,12 +9,9 @@ namespace InvertArray {
         //Allocating memory for the new array
         T* newArray = (T*)malloc(sizeof(T) * length);
 
-        //Making length = length - 1 if length is a odd number.
-        length = length % 2 ? length : length + 1;
-
-        //Inverting the array.
-        for(int i = 0; i <= length; i++) {
-            newArray[i] = arr[length - i];
+        //Inverting the array and returning the new array:
+        for(int i = length - 1; i >= 0; i--) {
+            newArray[length - i - 1] = arr[i];
         }
 
         return newArray;
