@@ -3,7 +3,7 @@
 
 namespace InsertionSort {
     template <typename T>
-    T* sort(T* arr);
+    T* sort(T* arr, int length);
 }
 
 #endif
