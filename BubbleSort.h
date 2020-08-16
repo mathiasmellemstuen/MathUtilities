@@ -18,4 +18,4 @@ namespace SortingAlgorithms::BubbleSort {
         }
     }
 }
-#endif //SORTALGORITHMS_BUBBLESORT_H
+#endif
