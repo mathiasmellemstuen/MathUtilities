@@ -7,7 +7,7 @@
 
 #include "Swap.h"
 
-namespace BubbleSort {
+namespace SortingAlgorithms::BubbleSort {
     template <typename T>
     T* sort(T* arr, int length) {
 

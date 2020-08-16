@@ -1,7 +1,7 @@
 #ifndef SORTALGORITHMS_INSERTIONSORT_H
 #define SORTALGORITHMS_INSERTIONSORT_H
 
-namespace InsertionSort {
+namespace SortingAlgorithms::InsertionSort {
     template <typename T>
     T* sort(T* arr, int length) {
 

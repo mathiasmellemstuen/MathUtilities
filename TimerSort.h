@@ -5,7 +5,7 @@
 #ifndef SORTALGORITHMS_TIMERSORT_H
 #define SORTALGORITHMS_TIMERSORT_H
 
-namespace TimeSort {
+namespace SortingAlgorithms::TimeSort {
     template <typename T>
     T* sort(T* arr, int length) {
         // Creating a new vector

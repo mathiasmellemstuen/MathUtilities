@@ -5,7 +5,7 @@
 #ifndef SORTALGORITHMS_SWAP_H
 #define SORTALGORITHMS_SWAP_H
 
-namespace Swap {
+namespace SortingAlgorithms::Swap {
     template <typename T>
     void swap(T* x, T* y) {
         int temp = *x;
