@@ -1,7 +1,8 @@
 #include <iostream>
-#include "InsertionSort.cpp"
-#include "InvertArray.cpp"
-#include "TimerSort.cpp"
+#include "InsertionSort.h"
+#include "InvertArray.h"
+#include "TimerSort.h"
+#include "Swap.h"
 
 int main() {
 
@@ -23,6 +24,7 @@ int main() {
         std::cout << inverted[i] << std::endl;
     }
 
+    /*
     // Testing timed sorting:
     std::cout << "TESTING: Timed sorting" << std::endl;
     int arr2[] = {5,3,54,2,54,36,70,100,30,8,1};
@@ -32,6 +34,14 @@ int main() {
     for (int i = 0; i < length2; i++) {
         std::cout << sorted2[i] << std::endl;
     }
+
+     */
+
+    std::cout << "TESTING: Swap" << std::endl;
+    int number1 = 1;
+    int number2 = 2;
+    Swap::swap(&number1, &number2);
+    std::cout << "Number 1: " << number1 << " and number 2: " << number2 << std::endl;
 
     delete sorted;
     delete inverted;
