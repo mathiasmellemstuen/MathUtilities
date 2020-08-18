@@ -43,6 +43,7 @@ int main() {
 
     delete sorted;
     delete inverted;
+    delete sorted2;
 
     return 0;
 }
