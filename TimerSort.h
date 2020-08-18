@@ -7,21 +7,27 @@
 
 #include <vector>
 #include <thread>
+#include "iostream"
 
 namespace SortingAlgorithms::TimeSort {
     template <typename T>
     T* sort(T* arr, int length) {
-        // Creating a new vector
-        std::vector<T>* vectorPointer;
+
+        T* newArray = (T*)malloc(sizeof(T) * length);
 
         int* counter = new int;
-        // Creates threads for each element in arr
+
+        *counter = 0;
+
         std::thread thread[length];
 
         for (int i = 0; i < length; i++) {
-            thread[i] = std::thread([arr, i, vectorPointer, counter](){
-                std::this_thread::sleep_for(std::chrono::milliseconds(arr[i]));
-                vectorPointer->push_back(arr[i]);
+            int tVal = arr[i];
+
+            thread[i] = std::thread([tVal, counter, newArray]() mutable {
+                std::this_thread::sleep_for(std::chrono::milliseconds(tVal));
+
+                newArray[*counter] = tVal;
 
                 *counter = *counter + 1;
             });
@@ -31,10 +37,7 @@ namespace SortingAlgorithms::TimeSort {
             t.join();
         }
 
-        std::cout << counter << std::endl;
         delete counter;
-
-        T* newArray = (T*)malloc(sizeof(T) * length);
         return newArray;
     }
 }
