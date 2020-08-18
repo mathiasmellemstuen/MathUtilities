@@ -24,7 +24,6 @@ int main() {
         std::cout << inverted[i] << std::endl;
     }
 
-    /*
     // Testing timed sorting:
     std::cout << "TESTING: Timed sorting" << std::endl;
     int arr2[] = {5,3,54,2,54,36,70,100,30,8,1};
@@ -35,7 +34,6 @@ int main() {
         std::cout << sorted2[i] << std::endl;
     }
 
-     */
 
     std::cout << "TESTING: Swap" << std::endl;
     int number1 = 1;
