@@ -7,11 +7,20 @@
 
 #include <vector>
 #include <thread>
-#include "iostream"
+#include <iostream>
 
 namespace SortingAlgorithms::TimeSort {
+
+    static const int threadsLimit = 1900;
+
     template <typename T>
     T* sort(T* arr, int length) {
+
+        // Returning a nullptr if the length exceeds the max-limit. This is for avoiding a potential stackoverflow.
+        if(length > threadsLimit) {
+            std::cout << "ERROR: The max length of arrays sorted by this function is: " << threadsLimit << std::endl;
+            return nullptr;
+        }
 
         // Allocating memory for the new array
         T* newArray = (T*)malloc(sizeof(T) * length);
@@ -23,8 +32,10 @@ namespace SortingAlgorithms::TimeSort {
         std::thread thread[length];
 
         for (int i = 0; i < length; i++) {
+
             // Sets the array position to a value
-            int tVal = arr[i];
+            T tVal = arr[i];
+            tVal = (int)tVal; //Casting it to a int because sleep_for takes a integer.
 
             // Sets a thread to "sort" a number
             thread[i] = std::thread([tVal, counter, newArray]() mutable {
