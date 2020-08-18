@@ -8,7 +8,7 @@
 namespace SortingAlgorithms::Swap {
     template <typename T>
     void swap(T* x, T* y) {
-        int temp = *x;
+        T temp = *x;
         *x = *y;
         *y = temp;
     }

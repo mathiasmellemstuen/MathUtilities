@@ -3,6 +3,7 @@
 #include "InvertArray.h"
 #include "TimerSort.h"
 #include "Swap.h"
+#include "BubbleSort.h"
 
 int main() {
 
@@ -41,9 +42,16 @@ int main() {
     SortingAlgorithms::Swap::swap(&number1, &number2);
     std::cout << "Number 1: " << number1 << " and number 2: " << number2 << std::endl;
 
-    delete sorted;
+    std::cout << "TESTING: Bubble sort" << std::endl;
+    int* sorted3 = SortingAlgorithms::BubbleSort::sort(arr,length);
+    for(int i = 0; i < length; i++) {
+        std::cout << sorted[i] << std::endl;
+    }
+
     delete inverted;
+    delete sorted;
     delete sorted2;
+    delete sorted3;
 
     return 0;
 }
