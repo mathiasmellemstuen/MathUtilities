@@ -5,7 +5,7 @@
 #ifndef SORTALGORITHMS_INVERTARRAY_H
 #define SORTALGORITHMS_INVERTARRAY_H
 
-namespace SortingAlgorithms::InvertArray {
+namespace SortingAlgorithms::Utility::InvertArray {
     template<typename T>
     T* invert(T* arr, int length) {
 

@@ -1,7 +1,9 @@
 #ifndef SORTALGORITHMS_INSERTIONSORT_H
 #define SORTALGORITHMS_INSERTIONSORT_H
 
-namespace SortingAlgorithms::InsertionSort {
+#include "../Utility/Swap.h"
+
+namespace SortingAlgorithms::Basic::InsertionSort {
     template <typename T>
     T* sort(T* arr, int length) {
 
@@ -18,9 +20,7 @@ namespace SortingAlgorithms::InsertionSort {
         for(int i = 0; i < length; i++) {
             for(int j = i; j > 0; j--) {
                 if(newArray[j] < newArray[j - 1]) {
-                    temp = newArray[j];
-                    newArray[j] = newArray[j - 1];
-                    newArray[j - 1] = temp;
+                   SortingAlgorithms::Utility::Swap::swap(newArray + (j - 1), newArray + j);
                 }
             }
         }

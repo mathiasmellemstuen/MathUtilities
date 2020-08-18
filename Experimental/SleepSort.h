@@ -9,7 +9,7 @@
 #include <thread>
 #include <iostream>
 
-namespace SortingAlgorithms::TimeSort {
+namespace SortingAlgorithms::Experimental::SleepSort {
 
     static const int threadsLimit = 1900;
 

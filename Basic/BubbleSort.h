@@ -5,9 +5,9 @@
 #ifndef SORTALGORITHMS_BUBBLESORT_H
 #define SORTALGORITHMS_BUBBLESORT_H
 
-#include "Swap.h"
+#include "../Utility/Swap.h"
 
-namespace SortingAlgorithms::BubbleSort {
+namespace SortingAlgorithms::Basic::BubbleSort {
     template <typename T>
     T* sort(T* arr, int length) {
 
@@ -28,7 +28,7 @@ namespace SortingAlgorithms::BubbleSort {
             for(int i = 0; i < length; i++) {
                 if(newArray[i - 1] > newArray[i]) {
                     swapped = true;
-                    SortingAlgorithms::Swap::swap(newArray + (i - 1), newArray + i);
+                    SortingAlgorithms::Utility::Swap::swap(newArray + (i - 1), newArray + i);
                 }
             }
         } while(swapped); //Algorithm is running until it has had one whole pass without any swaps. The array is sorted if this is the case.
