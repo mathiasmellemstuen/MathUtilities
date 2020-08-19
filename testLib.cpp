@@ -27,13 +27,31 @@ int main() {
 
     // Testing timed sorting:
     std::cout << "TESTING: Timed sorting" << std::endl;
-    int arr2[] = {5,3,54,2,54,36,70,100,30,8,1};
-    int length2 = sizeof(arr2) / sizeof(*arr2);
-    int* sorted2 = SortingAlgorithms::Experimental::SleepSort::sort(arr2, length2);
-
-    for (int i = 0; i < length2; i++) {
-        std::cout << sorted2[i] << std::endl;
+    // Generating a "random" array of numbers to test on
+    int arr2Size = 20;  // Define the size of the array
+    int arr2[arr2Size]; // Define the array
+    for (int i = 0; i < arr2Size; i++) {    // Fill the array with random number (1 - 100)
+        arr2[i] = rand() % 100;
     }
+
+    // Sorts the array
+    int length2 = sizeof(arr2) / sizeof(*arr2); // Define the lenth of the array
+    int* sorted2 = SortingAlgorithms::Experimental::SleepSort::sort(arr2, length2); // Sorts the array using SleepSort
+
+    // Print the unsorted array
+    std::cout << "Unsorted array: ";
+    for (int i = 0; i < arr2Size; i++) {
+        std::cout << arr2[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Print the sorted array
+    std::cout << "Sorted array:   ";
+    for (int i = 0; i < length2; i++) {
+        std::cout << sorted2[i] << " ";
+    }
+    std::cout << std::endl;
+
 
 
     std::cout << "TESTING: Swap" << std::endl;
