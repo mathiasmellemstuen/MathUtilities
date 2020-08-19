@@ -63,10 +63,10 @@ int main() {
         std::cout << sorted[i] << std::endl;
     }
 
-    delete inverted;
-    delete sorted;
-    delete sorted2;
-    delete sorted3;
+    delete[] inverted;
+    delete[] sorted;
+    delete[] sorted2;
+    delete[] sorted3;
 
     return 0;
 }
