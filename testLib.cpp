@@ -25,14 +25,13 @@ int main() {
         std::cout << inverted[i] << std::endl;
     }
 
-    // Testing timed sorting:
+    // Testing sleep sorting:
     std::cout << "TESTING: Timed sorting" << std::endl;
     // Generating a "random" array of numbers to test on
     int arr2Size = 20;  // Define the size of the array
     int arr2[arr2Size]; // Define the array
-    for (int i = 0; i < arr2Size; i++) {    // Fill the array with random number (1 - 100)
+    for (int i = 0; i < arr2Size; i++)  // Fill the array with random number (1 - 100)
         arr2[i] = rand() % 100;
-    }
 
     // Sorts the array
     int length2 = sizeof(arr2) / sizeof(*arr2); // Define the lenth of the array
@@ -40,16 +39,14 @@ int main() {
 
     // Print the unsorted array
     std::cout << "Unsorted array: ";
-    for (int i = 0; i < arr2Size; i++) {
+    for (int i = 0; i < arr2Size; i++)
         std::cout << arr2[i] << " ";
-    }
     std::cout << std::endl;
 
     // Print the sorted array
     std::cout << "Sorted array:   ";
-    for (int i = 0; i < length2; i++) {
+    for (int i = 0; i < length2; i++)
         std::cout << sorted2[i] << " ";
-    }
     std::cout << std::endl;
 
 
