@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Utility/Swap.h"
 #include "Utility/InvertArray.h"
+#include "Utility/IsSorted.h"
 #include "Basic/InsertionSort.h"
 #include "Basic/BubbleSort.h"
 #include "Experimental/SleepSort.h"
@@ -26,7 +27,7 @@ int main() {
     std::cout << "TESTING: Bubble sort" << std::endl;
     int* sorted3 = SortingAlgorithms::Basic::BubbleSort::sort(arr,length);
     for(int i = 0; i < length; i++)
-        std::cout << sorted[i] << " ";
+        std::cout << sorted3[i] << " ";
     std::cout << std::endl << std::endl;
 
     // Testing sleep sorting:
@@ -51,7 +52,9 @@ int main() {
     std::cout << "Sorted array:   ";
     for (int i = 0; i < length2; i++)
         std::cout << sorted2[i] << " ";
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
+
+    std::cout << SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) << std::endl << std::endl;
 
     std::cout << "TESTING: Swap" << std::endl;
     int number1 = 1;
