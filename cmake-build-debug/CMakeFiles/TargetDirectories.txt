@@ -1,3 +1,0 @@
-/Users/tobiashallingstad/Library/Mobile Documents/com~apple~CloudDocs/Programmering/Github/SortAlgorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/tobiashallingstad/Library/Mobile Documents/com~apple~CloudDocs/Programmering/Github/SortAlgorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/tobiashallingstad/Library/Mobile Documents/com~apple~CloudDocs/Programmering/Github/SortAlgorithms/cmake-build-debug/CMakeFiles/SortAlgorithms.dir
