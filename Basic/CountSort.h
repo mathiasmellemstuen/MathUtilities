@@ -11,23 +11,22 @@
 namespace SortingAlgorithms::Basic::CountSort {
     int* sort(int* arr, int length) {
         // Returning a null pointer if the number to high
-        /*
         if (length < 2000)
             return nullptr;
-        */
 
+        // Allocation memory for the output array
         int* arrOut = (int*)malloc(sizeof(int) * length);
 
-        //int* arrOut[length];
         int min = std::numeric_limits<int>::max();
         int max = std::numeric_limits<int>::min();
 
+        // Find the min and max value in the unsorted array
         for (int i = 0; i < length; i++) {
             min = min > arr[i] ? arr[i] : min;
             max = max < arr[i] ? arr[i] : max;
         }
 
-        int range = max - min + 1;
+        int range = max - min + 1; // Calculates the range of values needed to create for the count array to count all numbers
         int count[range];
 
         for (int i = 0; i < range; i++) {

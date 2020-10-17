@@ -5,6 +5,7 @@ A library that contains various sorting algorithms.
 ### Basic sorting
 - Bubble
 - Insertion
+- Counting
 
 ### Experimental
 - Sleep sort
@@ -12,3 +13,4 @@ A library that contains various sorting algorithms.
 ## Utility
 - Invert array
 - Swap
+- Is Sorted
