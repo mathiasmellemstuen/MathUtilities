@@ -8,6 +8,8 @@
 #include "Basic/BubbleSort.h"
 #include "Basic/CountSort.h"
 
+#include "Advanced/RadixSort.h"
+
 #include "Experimental/SleepSort.h"
 
 int main() {
@@ -79,8 +81,20 @@ int main() {
     std::cout << "Number 1: " << number1 << " and number 2: " << number2 << std::endl << std::endl;
 
     /*
-     * Testing counting sort
+     * Testing radix sort
      */
+    std::cout << "TESTING: Radix sort" << std::endl;
+    sorted2 = SortingAlgorithms::Advanced::RadixSort::sort(arr2, length2);
+
+    // Print the sorted array
+    std::cout << "Sorted array:   ";
+    for (int i = 0; i < length2; i++)
+        std::cout << sorted2[i] << " ";
+    std::cout << std::endl << (SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) ? "List is sorted" : "List not sorted") << std::endl << std::endl;
+
+    /*
+ * Testing counting sort
+ */
     std::cout << "TESTING: CountSort" << std::endl;
     sorted2 = SortingAlgorithms::Basic::CountSort::sort(arr2, length2);
 
@@ -89,6 +103,7 @@ int main() {
     for (int i = 0; i < length2; i++)
         std::cout << sorted2[i] << " ";
     std::cout << std::endl << (SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) ? "List is sorted" : "List not sorted") << std::endl;
+
 
     delete[] inverted;
     delete[] sorted;

@@ -7,6 +7,10 @@ A library that contains various sorting algorithms.
 - Insertion
 - Counting
 
+### Advanced
+- Radix sort
+    - Int - base 10
+
 ### Experimental
 - Sleep sort
 
