@@ -29,19 +29,16 @@ namespace SortingAlgorithms::Basic::CountSort {
         int range = max - min + 1; // Calculates the range of values needed to create for the count array to count all numbers
         int count[range];
 
-        for (int i = 0; i < range; i++) {
+        for (int i = 0; i < range; i++)
             count[i] = 0;
-        }
 
         // Count numbers from arr. Counts the instance
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++)
             count[arr[i] - min]++;
-        }
 
         // Create the index for the output. Modifies it into sum
-        for (int i = 1; i < range; i++) {
+        for (int i = 1; i < range; i++)
             count[i] += count[i - 1];
-        }
 
         // Add the numbers to output. Places the object at its correct position and decreases the count by one
         for (int i = length - 1; i >= 0; i--) {
