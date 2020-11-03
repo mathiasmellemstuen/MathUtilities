@@ -1,5 +1,5 @@
-# SortAlgorithms
-A library that contains various sorting algorithms. 
+# Math Utilities
+A library C++ that contains different math utilities and algorithms.
 
 ## Current sorting algorithms implemented:
 ### Basic sorting
