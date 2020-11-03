@@ -20,7 +20,7 @@ int main() {
      * Testing the insertion sort algorithm:
      */
     std::cout << "TESTING: Insertion sort" << std::endl;
-    int* sorted = SortingAlgorithms::Basic::InsertionSort::sort(arr, length);
+    int* sorted = MathUtilities::SortingAlgorithms::Basic::InsertionSort::sort(arr, length);
     for(int i = 0; i < length; i++)
         std::cout << sorted[i] << " ";
     std::cout << std::endl << std::endl;
@@ -29,7 +29,7 @@ int main() {
      * Testing inverting algorithm:
      */
     std::cout << "TESTING: Inverting algorithm on the previous result." << std::endl;
-    int* inverted = SortingAlgorithms::Utility::InvertArray::invert(sorted, length);
+    int* inverted = MathUtilities::SortingAlgorithms::Utility::InvertArray::invert(sorted, length);
     for(int i = 0; i < length; i++)
         std::cout << inverted[i] << " ";
     std::cout << std::endl << std::endl;
@@ -38,7 +38,7 @@ int main() {
      * Testing bubble sort
      */
     std::cout << "TESTING: Bubble sort" << std::endl;
-    int* sorted3 = SortingAlgorithms::Basic::BubbleSort::sort(arr,length);
+    int* sorted3 = MathUtilities::SortingAlgorithms::Basic::BubbleSort::sort(arr,length);
     for(int i = 0; i < length; i++)
         std::cout << sorted3[i] << " ";
     std::cout << std::endl << std::endl;
@@ -55,7 +55,7 @@ int main() {
 
     // Sorts the array
     int length2 = sizeof(arr2) / sizeof(*arr2); // Define the lenth of the array
-    int* sorted2 = SortingAlgorithms::Experimental::SleepSort::sort(arr2, length2); // Sorts the array using SleepSort
+    int* sorted2 = MathUtilities::SortingAlgorithms::Experimental::SleepSort::sort(arr2, length2); // Sorts the array using SleepSort
 
     // Print the unsorted array
     std::cout << "Unsorted array: ";
@@ -69,7 +69,7 @@ int main() {
         std::cout << sorted2[i] << " ";
     std::cout << std::endl;
 
-    std::cout << SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) << std::endl << std::endl;
+    std::cout << MathUtilities::SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) << std::endl << std::endl;
 
     /*
      * Testing swap
@@ -77,32 +77,32 @@ int main() {
     std::cout << "TESTING: Swap" << std::endl;
     int number1 = 1;
     int number2 = 2;
-    SortingAlgorithms::Utility::Swap::swap(&number1, &number2);
+    MathUtilities::SortingAlgorithms::Utility::Swap::swap(&number1, &number2);
     std::cout << "Number 1: " << number1 << " and number 2: " << number2 << std::endl << std::endl;
 
     /*
      * Testing radix sort
      */
     std::cout << "TESTING: Radix sort" << std::endl;
-    sorted2 = SortingAlgorithms::Advanced::RadixSort::sort(arr2, length2);
+    sorted2 = MathUtilities::SortingAlgorithms::Advanced::RadixSort::sort(arr2, length2);
 
     // Print the sorted array
     std::cout << "Sorted array:   ";
     for (int i = 0; i < length2; i++)
         std::cout << sorted2[i] << " ";
-    std::cout << std::endl << (SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) ? "List is sorted" : "List not sorted") << std::endl << std::endl;
+    std::cout << std::endl << (MathUtilities::SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) ? "List is sorted" : "List not sorted") << std::endl << std::endl;
 
     /*
  * Testing counting sort
  */
     std::cout << "TESTING: CountSort" << std::endl;
-    sorted2 = SortingAlgorithms::Basic::CountSort::sort(arr2, length2);
+    sorted2 = MathUtilities::SortingAlgorithms::Basic::CountSort::sort(arr2, length2);
 
     // Print the sorted array
     std::cout << "Sorted array:   ";
     for (int i = 0; i < length2; i++)
         std::cout << sorted2[i] << " ";
-    std::cout << std::endl << (SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) ? "List is sorted" : "List not sorted") << std::endl;
+    std::cout << std::endl << (MathUtilities::SortingAlgorithms::Utility::IsSorted::isSorted(sorted2, length2) ? "List is sorted" : "List not sorted") << std::endl;
 
 
     delete[] inverted;
