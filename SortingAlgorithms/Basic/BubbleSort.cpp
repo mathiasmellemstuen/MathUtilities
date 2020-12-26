@@ -1,7 +1,7 @@
 #ifndef SORTALGORITHMS_BUBBLESORT_H
 #define SORTALGORITHMS_BUBBLESORT_H
 #include <cstdlib>
-#include "../Utility/Swap.h"
+#include "../../Utility/Swap.h"
 #include "BubbleSort.h"
 namespace MathUtilities::SortingAlgorithms::Basic::BubbleSort {
 

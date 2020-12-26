@@ -2,4 +2,4 @@ project(MathUtilities)
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(Threads)
-add_library(MathUtilities Utility/InvertArray.h Utility/IsSorted.cpp Utility/IsSorted.h Utility/Swap.h Advanced/RadixSort.cpp Advanced/RadixSort.h Basic/BubbleSort.cpp Basic/BubbleSort.h Basic/CountSort.cpp Basic/CountSort.h Basic/InsertionSort.cpp Basic/InsertionSort.h Experimental/SleepSort.cpp Experimental/SleepSort.h libraryBuild.cpp)
+add_library(MathUtilities Utility/InvertArray.h Utility/IsSorted.cpp Utility/IsSorted.h Utility/Swap.h SortingAlgorithms/Advanced/RadixSort.cpp SortingAlgorithms/Advanced/RadixSort.h SortingAlgorithms/Basic/BubbleSort.cpp SortingAlgorithms/Basic/BubbleSort.h SortingAlgorithms/Basic/CountSort.cpp SortingAlgorithms/Basic/CountSort.h SortingAlgorithms/Basic/InsertionSort.cpp SortingAlgorithms/Basic/InsertionSort.h SortingAlgorithms/Experimental/SleepSort.cpp SortingAlgorithms/Experimental/SleepSort.h libraryBuild.cpp)

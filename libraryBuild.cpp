@@ -1,6 +1,6 @@
-#include "Basic/BubbleSort.h"
-#include "Basic/InsertionSort.h"
-#include "Experimental/SleepSort.h"
+#include "SortingAlgorithms/Basic/BubbleSort.h"
+#include "SortingAlgorithms/Basic/InsertionSort.h"
+#include "SortingAlgorithms/Experimental/SleepSort.h"
 
 //Bubble sort
 int* MathUtilities::SortingAlgorithms::Basic::BubbleSort::sort(int* arr, int length); 
