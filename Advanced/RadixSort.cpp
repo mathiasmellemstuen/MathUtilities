@@ -1,7 +1,3 @@
-//
-// Created by tobia on 18-Oct-20.
-//
-
 #ifndef SORTALGORITHMS_RADIXSORT_H
 #define SORTALGORITHMS_RADIXSORT_H
 

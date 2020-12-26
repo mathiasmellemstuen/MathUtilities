@@ -1,9 +1,7 @@
-//
-// Created by matmel on 13.08.2020.
-//
-
 #ifndef SORTALGORITHMS_INVERTARRAY_H
 #define SORTALGORITHMS_INVERTARRAY_H
+
+#include <cstdlib>
 
 namespace MathUtilities::SortingAlgorithms::Utility::InvertArray {
     template<typename T>

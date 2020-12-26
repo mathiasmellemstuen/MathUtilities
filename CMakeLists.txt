@@ -3,8 +3,3 @@ set(CMAKE_CXX_STANDARD 20)
 
 find_package(Threads)
 add_library(MathUtilities Utility/InvertArray.h Utility/IsSorted.cpp Utility/IsSorted.h Utility/Swap.h Advanced/RadixSort.cpp Advanced/RadixSort.h Basic/BubbleSort.cpp Basic/BubbleSort.h Basic/CountSort.cpp Basic/CountSort.h Basic/InsertionSort.cpp Basic/InsertionSort.h Experimental/SleepSort.cpp Experimental/SleepSort.h libraryBuild.cpp)
-#add_library(SortAlgorithmsLibrary TimerSort.h InsertionSort.h InvertArray.h BubbleSort.h Swap.h libraryBuild.cpp)
-#find_package(Threads)
-#add_executable(SortAlgorithms testLib.cpp Utility/Swap.h Utility/InvertArray.h Basic/InsertionSort.h Basic/BubbleSort.h Experimental/SleepSort.h Basic/CountSort.h Advanced/RadixSort.h)
-#target_link_libraries(SortAlgorithms ${CMAKE_THREAD_LIBS_INIT})
-#target_link_libraries(SortAlgorithms PRIVATE SortAlgorithmsLibrary)

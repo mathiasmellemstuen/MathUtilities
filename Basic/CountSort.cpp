@@ -1,14 +1,11 @@
-//
-// Created by tobia on 16-Oct-20.
-//
-
 #ifndef SORTALGORITHMS_COUNTSORT_H
 #define SORTALGORITHMS_COUNTSORT_H
 
+#include <cstdlib>
 #include <limits>
 #include <iostream>
-
 #include "CountSort.h"
+
 namespace MathUtilities::SortingAlgorithms::Basic::CountSort {
     int* sort(int* arr, int length) {
         // Returning a null pointer if the number to high

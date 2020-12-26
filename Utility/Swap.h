@@ -1,7 +1,3 @@
-//
-// Created by Matmel on 15.08.2020.
-//
-
 #ifndef SORTALGORITHMS_SWAP_H
 #define SORTALGORITHMS_SWAP_H
 

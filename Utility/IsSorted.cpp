@@ -1,7 +1,3 @@
-//
-// Created by Tobias Hallingstad on 16/10/2020.
-//
-
 #ifndef SORTALGORITHMS_ISSORTED_H
 #define SORTALGORITHMS_ISSORTED_H
 

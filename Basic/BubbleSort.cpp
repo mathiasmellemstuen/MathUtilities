@@ -1,13 +1,10 @@
-//
-// Created by Matmel on 15.08.2020.
-//
-
 #ifndef SORTALGORITHMS_BUBBLESORT_H
 #define SORTALGORITHMS_BUBBLESORT_H
-
+#include <cstdlib>
 #include "../Utility/Swap.h"
 #include "BubbleSort.h"
 namespace MathUtilities::SortingAlgorithms::Basic::BubbleSort {
+
     template <typename T>
     T* sort(T* arr, int length) {
 

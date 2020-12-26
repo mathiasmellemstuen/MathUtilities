@@ -1,6 +1,7 @@
 #ifndef SORTALGORITHMS_INSERTIONSORT_H
 #define SORTALGORITHMS_INSERTIONSORT_H
 
+#include <cstdlib>
 #include "../Utility/Swap.h"
 #include "InsertionSort.h"
 
