@@ -6,21 +6,21 @@
 #include <math.h>
 
 namespace MathUtilities::DataStructure {
-    template<int size, typename T> class Vector : public Matrix<size,1,T> {
+    template<int size, typename T> class Vector : public Matrix<1,size,T> {
         public:
             T& operator [] (int i) {
-                return this->values[i][0];
+                return this->values[0][i];
             };
-            Vector() : Matrix<size,1,T>() {
+            Vector() : Matrix<1,size,T>() {
                 for(int i = 0; i < size; i++) {
-                    this->values[i][0] = (T)0; 
+                    this->values[0][i] = (T)0; 
                 }
             };
             T length() {
                 T sum = (T)0;
 
                 for(int i = 0; i < size; i++) {
-                    sum += std::pow(this->values[i][0], 2);
+                    sum += std::pow(this->values[0][i], 2);
                 }
 
                 return std::sqrt(sum);
@@ -29,7 +29,7 @@ namespace MathUtilities::DataStructure {
             Vector<size,T> operator + (Vector<size,T>& vec) {
                 Vector<size,T> returnVector;
                 for(int i = 0; i < size; i++) {
-                    returnVector.values[i][0] = vec.values[i][0] + this->values[i][0]; 
+                    returnVector.values[0][i] = vec.values[0][i] + this->values[0][i]; 
                 }
                 return returnVector; 
             };
@@ -37,7 +37,7 @@ namespace MathUtilities::DataStructure {
 
                 Vector<size,T> returnVector;
                 for(int i = 0; i < size; i++) {
-                    returnVector.values[i][0] = this->values[i][0] - vec.values[i][0]; 
+                    returnVector.values[0][i] = this->values[0][i] - vec.values[0][i]; 
                 }
                 return returnVector;
             };
@@ -54,7 +54,7 @@ namespace MathUtilities::DataStructure {
                 T sum = (T)0;
                 
                 for(int i = 0; i < size; i++) {
-                    sum += this->values[i][0] * vec[i];      
+                    sum += this->values[0][i] * vec[i];      
                 }
                 return sum; 
             };
@@ -62,38 +62,38 @@ namespace MathUtilities::DataStructure {
                 Vector<size, T> returnVector; 
 
                 for(int i = 0; i < size; i++) {
-                    returnVector.values[i][0] = mat[i][0];
+                    returnVector.values[0][i] = mat[0][i];
                 }
                 return returnVector; 
             };
-            Matrix<size, 1, T> operator = (Vector<size,T>& vec) {
-                Matrix<size, 1, T> returnMatrix; 
+            Matrix<1, size, T> operator = (Vector<size,T>& vec) {
+                Matrix<1, size, T> returnMatrix; 
 
                 for(int i = 0; i  < size; i++) {
-                    returnMatrix.values[i][0] = vec.values[i][0]; 
+                    returnMatrix.values[0][i] = vec.values[0][i]; 
                 }
 
                 return returnMatrix; 
             };
     };
-    template <typename T> class Vector<4,T> : public Matrix<4, 1, T> {
+    template <typename T> class Vector<4,T> : public Matrix<1, 4, T> {
         public: 
-            T& x = this->values[0][0]; 
-            T& y = this->values[1][0]; 
-            T& z = this->values[2][0]; 
-            T& w = this->values[3][0];
+            T& x = this->values[0][0];
+            T& y = this->values[0][1]; 
+            T& z = this->values[0][2]; 
+            T& w = this->values[0][3];
 
-            Vector(T x, T y, T z, T w) : Matrix<4,1,T>() {
+            Vector(T x, T y, T z, T w) : Matrix<1,4,T>() {
                 this->values[0][0] = x; 
-                this->values[1][0] = y; 
-                this->values[2][0] = z;
-                this->values[3][0] = w;
+                this->values[0][1] = y; 
+                this->values[0][2] = z;
+                this->values[0][3] = w;
             };
-            Vector() : Matrix<4,1,T>() {
+            Vector() : Matrix<1,4,T>() {
                 this->values[0][0] = (T)0; 
-                this->values[1][0] = (T)0; 
-                this->values[2][0] = (T)0; 
-                this->values[3][0] = (T)0;
+                this->values[0][1] = (T)0; 
+                this->values[0][2] = (T)0; 
+                this->values[0][3] = (T)0;
             };
             T length() {
                 return std::sqrt((std::pow(x,2) + std::pow(y,2) + std::pow(z,2) + std::pow(w,2)));
@@ -101,7 +101,7 @@ namespace MathUtilities::DataStructure {
             Vector<4,T> operator + (Vector<4,T>& vec) {
                 Vector<4,T> returnVector;
                 for(int i = 0; i < 4; i++) {
-                    returnVector.values[i][0] = vec.values[i][0] + this->values[i][0]; 
+                    returnVector.values[0][i] = vec.values[0][i] + this->values[0][i]; 
                 }
                 return returnVector; 
             };
@@ -109,7 +109,7 @@ namespace MathUtilities::DataStructure {
 
                 Vector<4,T> returnVector;
                 for(int i = 0; i < 4; i++) {
-                    returnVector.values[i][0] = this->values[i][0] - vec.values[i][0]; 
+                    returnVector.values[0][i] = this->values[0][i] - vec.values[0][i]; 
                 }
                 return returnVector;
             };
@@ -126,43 +126,43 @@ namespace MathUtilities::DataStructure {
                 T sum = (T)0;
                 
                 for(int i = 0; i < 4; i++) {
-                    sum += this->values[i][0] * vec.values[i][0];      
+                    sum += this->values[0][i] * vec.values[0][i];      
                 }
                 return sum; 
             };
-            Vector<4, T> operator = (Matrix<4,1,T>& mat) {
+            Vector<4, T> operator = (Matrix<1,4,T>& mat) {
                 Vector<4, T> returnVector; 
 
                 for(int i = 0; i < 4; i++) {
-                    returnVector.values[i][0] = mat[i][0];
+                    returnVector.values[0][i] = mat[0][i];
                 }
                 return returnVector; 
             };
-            Matrix<4, 1, T> operator = (Vector<4,T>& vec) {
-                Matrix<4, 1, T> returnMatrix; 
+            Matrix<1, 4, T> operator = (Vector<4,T>& vec) {
+                Matrix<1, 4, T> returnMatrix; 
 
                 for(int i = 0; i  < 4; i++) {
-                    returnMatrix.values[i][0] = vec.values[i][0]; 
+                    returnMatrix.values[0][i] = vec.values[0][i]; 
                 }
 
                 return returnMatrix; 
             };
     };
-    template <typename T> class Vector<3,T> : public Matrix<3, 1, T> {
+    template <typename T> class Vector<3,T> : public Matrix<1, 3, T> {
         public: 
             T& x = this->values[0][0]; 
-            T& y = this->values[1][0]; 
-            T& z = this->values[2][0]; 
+            T& y = this->values[0][1]; 
+            T& z = this->values[0][2]; 
     
-            Vector(T x, T y, T z) : Matrix<3,1,T>() {
+            Vector(T x, T y, T z) : Matrix<1,3,T>() {
                 this->values[0][0] = x; 
-                this->values[1][0] = y; 
-                this->values[2][0] = z;
+                this->values[0][1] = y; 
+                this->values[0][2] = z;
             };
-            Vector() : Matrix<3,1,T>() {
+            Vector() : Matrix<1,3,T>() {
                 this->values[0][0] = (T)0; 
-                this->values[1][0] = (T)0; 
-                this->values[2][0] = (T)0; 
+                this->values[0][1] = (T)0; 
+                this->values[0][2] = (T)0; 
             };
             T length() {
                 return std::sqrt((std::pow(x,2) + std::pow(y,2) + std::pow(z,2)));
@@ -170,7 +170,7 @@ namespace MathUtilities::DataStructure {
             Vector<3,T> operator + (Vector<3,T>& vec) {
                 Vector<4,T> returnVector;
                 for(int i = 0; i < 3; i++) {
-                    returnVector.values[i][0] = vec.values[i][0] + this->values[i][0]; 
+                    returnVector.values[0][i] = vec.values[0][i] + this->values[0][i]; 
                 }
                 return returnVector; 
             };
@@ -178,7 +178,7 @@ namespace MathUtilities::DataStructure {
 
                 Vector<3,T> returnVector;
                 for(int i = 0; i < 3; i++) {
-                    returnVector.values[i][0] = this->values[i][0] - vec.values[i][0]; 
+                    returnVector.values[0][i] = this->values[0][i] - vec.values[0][i]; 
                 }
                 return returnVector;
             };
@@ -195,40 +195,40 @@ namespace MathUtilities::DataStructure {
                 T sum = (T)0;
                 
                 for(int i = 0; i < 3; i++) {
-                    sum += this->values[i][0] * vec[i];      
+                    sum += this->values[0][i] * vec[i];      
                 }
                 return sum; 
             };
-            Vector<3, T> operator = (Matrix<3,1,T>& mat) {
+            Vector<3, T> operator = (Matrix<1,3,T>& mat) {
                 Vector<3, T> returnVector; 
 
                 for(int i = 0; i < 3; i++) {
-                    returnVector.values[i][0] = mat[i][0];
+                    returnVector.values[0][i] = mat[0][i];
                 }
                 return returnVector; 
             };
-            Matrix<3, 1, T> operator = (Vector<3,T>& vec) {
-                Matrix<3, 1, T> returnMatrix; 
+            Matrix<1, 3, T> operator = (Vector<3,T>& vec) {
+                Matrix<1, 3, T> returnMatrix; 
 
                 for(int i = 0; i  < 2; i++) {
-                    returnMatrix.values[i][0] = vec.values[i][0]; 
+                    returnMatrix.values[0][i] = vec.values[0][i]; 
                 }
 
                 return returnMatrix; 
             };
     };
-    template <typename T> class Vector<2,T> : public Matrix<2, 1, T> {
+    template <typename T> class Vector<2,T> : public Matrix<1, 2, T> {
         public: 
             T& x = this->values[0][0]; 
-            T& y = this->values[1][0]; 
+            T& y = this->values[0][1]; 
     
-            Vector(T x, T y) : Matrix<2,1,T>() {
+            Vector(T x, T y) : Matrix<1,2,T>() {
                 this->values[0][0] = x; 
-                this->values[1][0] = y; 
+                this->values[0][1] = y; 
             };
-            Vector() : Matrix<2,1,T>() {
+            Vector() : Matrix<1,2,T>() {
                 this->values[0][0] = (T)0; 
-                this->values[1][0] = (T)0; 
+                this->values[0][1] = (T)0; 
             };
             T length() {
                 return std::sqrt((std::pow(x,2) + std::pow(y,2)));
@@ -238,7 +238,7 @@ namespace MathUtilities::DataStructure {
                 Vector<2,T> returnVector;
 
                 for(int i = 0; i < 4; i++) {
-                    returnVector.values[i][0] = vec.values[i][0] + this->values[i][0]; 
+                    returnVector.values[0][i] = vec.values[0][i] + this->values[0][i]; 
                 }
 
                 return returnVector; 
@@ -247,7 +247,7 @@ namespace MathUtilities::DataStructure {
 
                 Vector<2,T> returnVector;
                 for(int i = 0; i < 4; i++) {
-                    returnVector.values[i][0] = this->values[i][0] - vec.values[i][0]; 
+                    returnVector.values[0][i] = this->values[0][i] - vec.values[0][i]; 
                 }
                 return returnVector;
             };
@@ -266,23 +266,23 @@ namespace MathUtilities::DataStructure {
                 T sum = (T)0;
                 
                 for(int i = 0; i < 2; i++) {
-                    sum += this->values[i][0] * vec[i];      
+                    sum += this->values[0][i] * vec[i];      
                 }
                 return sum; 
             };
-            Vector<2, T> operator = (Matrix<2,1,T>& mat) {
+            Vector<2, T> operator = (Matrix<1,2,T>& mat) {
                 Vector<2, T> returnVector; 
 
                 for(int i = 0; i < 2; i++) {
-                    returnVector.values[i][0] = mat[i][0];
+                    returnVector.values[0][i] = mat[0][i];
                 }
                 return returnVector; 
             };
-            Matrix<2, 1, T> operator = (Vector<2,T>& vec) {
-                Matrix<2, 1, T> returnMatrix; 
+            Matrix<1, 2, T> operator = (Vector<2,T>& vec) {
+                Matrix<1, 2, T> returnMatrix; 
 
                 for(int i = 0; i  < 2; i++) {
-                    returnMatrix.values[i][0] = vec.values[i][0]; 
+                    returnMatrix.values[0][i] = vec.values[0][i]; 
                 }
 
                 return returnMatrix; 
