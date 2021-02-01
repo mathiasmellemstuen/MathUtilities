@@ -1,6 +1,10 @@
 # Math Utilities
 A library C++ that contains different math utilities and algorithms.
 
+## Datastructures
+- Matrix
+- Vector
+
 ## Current sorting algorithms implemented:
 ### Basic sorting
 - Bubble
