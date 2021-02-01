@@ -48,4 +48,4 @@ namespace MathUtilities::SortingAlgorithms::Basic::CountSort {
     }
 }
 
-#endif //SORTALGORITHMS_COUNTSORT_H
+#endif

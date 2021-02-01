@@ -59,4 +59,4 @@ namespace MathUtilities::SortingAlgorithms::Experimental::SleepSort {
     }
 }
 
-#endif //SORTALGORITHMS_TIMERSORT_H
+#endif

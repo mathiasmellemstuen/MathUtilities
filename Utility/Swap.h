@@ -9,4 +9,4 @@ namespace MathUtilities::SortingAlgorithms::Utility::Swap {
         *y = temp;
     }
 }
-#endif //SORTALGORITHMS_SWAP_H
+#endif
